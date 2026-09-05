@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Video Controls</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo-area">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+        </svg>
+      </div>
+      <div>
+        <h1>IG Video Controls</h1>
+        <p class="subtitle">Reels & Feed Denetleyicisi</p>
+      </div>
+    </div>
+    <span class="status-badge">Aktif</span>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Oynatma Ayarları</div>
+    
+    <div class="setting-row">
+      <label for="seekStep">Yön Tuşları (← / →)</label>
+      <select id="seekStep" class="select-input">
+        <option value="3">3 saniye</option>
+        <option value="5" selected>5 saniye</option>
+        <option value="10">10 saniye</option>
+        <option value="15">15 saniye</option>
+      </select>
+    </div>
+
+    <div class="setting-row">
+      <label for="seekStepLarge">Hızlı Sarma (J / L)</label>
+      <select id="seekStepLarge" class="select-input">
+        <option value="5">5 saniye</option>
+        <option value="10" selected>10 saniye</option>
+        <option value="15">15 saniye</option>
+        <option value="30">30 saniye</option>
+      </select>
+    </div>
+
+    <div class="setting-row">
+      <label for="defaultSpeed">Varsayılan Hız</label>
+      <select id="defaultSpeed" class="select-input">
+        <option value="0.75">0.75x</option>
+        <option value="1" selected>1.0x (Normal)</option>
+        <option value="1.25">1.25x</option>
+        <option value="1.5">1.5x</option>
+        <option value="2">2.0x</option>
+      </select>
+    </div>
+
+    <div class="setting-row">
+      <label for="overlayPosition">Panel Konumu</label>
+      <select id="overlayPosition" class="select-input">
+        <option value="above-caption" selected>Yazıların Üstü (Önerilen)</option>
+        <option value="top">Videonun Üstü</option>
+        <option value="bottom">En Alt (Klasik)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Görünüm ve Bildirimler</div>
+
+    <div class="setting-row">
+      <span>Ekran Kontrol Paneli</span>
+      <label class="switch">
+        <input type="checkbox" id="showScrubber" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="setting-row">
+      <span>Ekran Bildirimleri (OSD Rozeti)</span>
+      <label class="switch">
+        <input type="checkbox" id="showOsd" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="setting-row">
+      <span>Ses Seviyesini Hatırla</span>
+      <label class="switch">
+        <input type="checkbox" id="rememberVolume" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Kısayol Tuşları</div>
+    <div class="shortcut-list">
+      <div class="shortcut-item">
+        <span class="keys"><kbd>←</kbd> <kbd>→</kbd></span>
+        <span class="desc">Geri / İleri Sar</span>
+      </div>
+      <div class="shortcut-item">
+        <span class="keys"><kbd>J</kbd> <kbd>L</kbd></span>
+        <span class="desc">10sn Hızlı Sar</span>
+      </div>
+      <div class="shortcut-item">
+        <span class="keys"><kbd>Space</kbd> / <kbd>K</kbd></span>
+        <span class="desc">Oynat / Durdur</span>
+      </div>
+      <div class="shortcut-item">
+        <span class="keys"><kbd>&lt;</kbd> <kbd>&gt;</kbd></span>
+        <span class="desc">Hızı Değiştir</span>
+      </div>
+      <div class="shortcut-item">
+        <span class="keys"><kbd>M</kbd></span>
+        <span class="desc">Sesi Aç / Kapat</span>
+      </div>
+      <div class="shortcut-item">
+        <span class="keys"><kbd>F</kbd></span>
+        <span class="desc">Tam Ekran</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>v1.0.1 • Instagram'da otomatik çalışır</span>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

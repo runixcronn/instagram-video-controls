@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Instagram Video Controls (Reels & Feed)",
+  "version": "1.0.0",
+  "description": "Instagram gönderi ve Reels videoları için sarma çubuğu (scrubber), hızlandırma ve klavye kontrolleri.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Instagram Video Controls Ayarları"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.instagram.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.instagram.com/*"],
+      "css": ["src/content/styles.css"],
+      "js": [
+        "src/content/videoTracker.js",
+        "src/content/osd.js",
+        "src/content/keyboard.js",
+        "src/content/uiOverlay.js",
+        "src/content/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
